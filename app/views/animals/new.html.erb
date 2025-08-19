@@ -1,0 +1,10 @@
+<div class="container">
+<%= simple_form_for @animal do |f| %>
+  <%= f.input, placeholder: "race", required: true %>
+  <%= f.input, placeholder: "sex", required: true %>
+  <%= f.input, placeholder: "origin of the name you want", required: true %>
+  <%= f.input, placeholder: "color", required: true %>
+  <%= f.input, placeholder: "species", required: true %>
+  <%= f.button :submit, 'Generate a cool original name', class: 'btn btn-primary' %>
+  </div>
+<% end %>
