@@ -7,6 +7,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.user = current_user
     if @animal.save
       redirect_to animal_path(@animal)
     else
@@ -15,12 +16,14 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    @animal = Animal.find(animal_params)
+    @animal = Animal.find(params[:id])
+    @animal.name = "Osiris"
+    @animal.description = "Osiris est un dieu egyptien"
   end
 
   private
 
   def animal_params
-    params.require(:animal).permit(:id)
+    params.require(:animal).permit(:race, :species, :color, :origin, :sex)
   end
 end

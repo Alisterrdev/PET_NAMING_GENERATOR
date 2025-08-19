@@ -7,7 +7,7 @@ class CreateAnimals < ActiveRecord::Migration[7.1]
       t.string :origin
       t.string :sex
       t.string :color
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
