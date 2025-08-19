@@ -1,4 +1,4 @@
-class CreateGénérateurMessages < ActiveRecord::Migration[7.1]
+class CreateGenerateurMessages < ActiveRecord::Migration[7.1]
   def change
     create_table :générateur_messages do |t|
       t.string :role
