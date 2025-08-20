@@ -1,10 +1,14 @@
+<h1 class="d-flex jusitify-center">Who's your animal ?</h1>
+
 <div class="container">
 <%= simple_form_for @animal do |f| %>
-  <%= f.input :race, placeholder: "race", required: true %>
-  <%= f.input :sex, placeholder: "sex", required: true %>
+
+  <%= f.input :species, placeholder: "species", required: true %>
+  <%= f.input :race, :collection => %w[MaineCoon Siamois Persan Bengal Sphinx Ragdoll], placeholder: "race", required: true %>
+  <%= f.input :sex, :collection => %w[male female], placeholder: "sex", required: true %>
   <%= f.input :origin, placeholder: "origin of the name you want", required: true %>
   <%= f.input :color, placeholder: "color", required: true %>
-  <%= f.input :species, placeholder: "species", required: true %>
+
   <%= f.button :submit, 'Generate a cool original name', class: 'btn btn-primary' %>
 <% end %>
 </div>
