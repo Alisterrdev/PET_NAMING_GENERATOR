@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_08_19_121454) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_19_131638) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,15 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_19_121454) do
     t.index ["user_id"], name: "index_chats_on_user_id"
   end
 
+  create_table "générateur_messages", force: :cascade do |t|
+    t.string "role"
+    t.text "content"
+    t.bigint "animals_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["animals_id"], name: "index_générateur_messages_on_animals_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "role"
     t.text "content"
@@ -62,5 +71,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_19_121454) do
   add_foreign_key "animals", "users", column: "users_id"
   add_foreign_key "chats", "animals", column: "animals_id"
   add_foreign_key "chats", "users"
+  add_foreign_key "générateur_messages", "animals", column: "animals_id"
   add_foreign_key "messages", "chats", column: "chats_id"
 end
