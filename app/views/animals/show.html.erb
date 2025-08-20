@@ -1,8 +1,7 @@
 
-<strong>Incredible name (<%= @animal.name %>):</strong>
-<blockquote class="blockquote"><%= @animal.description %></blockquote>
+<h1><%= @response.content %></h1>
 
-<h2>Félicitations ! You found a great name for your pet !</h2>
 
-<%= link_to "Regénérer un prénom", new_animal_message_path(@animal), class: "btn btn-primary" %>
+<h2>Congratulations ! You found a great name for your pet !</h2>
 
+<%= link_to "Regénérer un prénom", new_animal_path(@animal), class: "btn btn-primary" %>
