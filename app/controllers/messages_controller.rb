@@ -19,3 +19,4 @@ class MessagesController < ApplicationController
   end
 
 end
+end
