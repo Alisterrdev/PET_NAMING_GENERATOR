@@ -3,7 +3,7 @@
 <div class="container">
 <%= simple_form_for @animal do |f| %>
 
-  <%= f.input :species, placeholder: "species", required: true %>
+  <%= f.input :species, :collection => %w[Cat Dog],placeholder: "species", required: true %>
   <%= f.input :race, :collection => %w[MaineCoon Siamois Persan Bengal Sphinx Ragdoll], placeholder: "race", required: true %>
   <%= f.input :sex, :collection => %w[male female], placeholder: "sex", required: true %>
   <%= f.input :origin, placeholder: "origin of the name you want", required: true %>
