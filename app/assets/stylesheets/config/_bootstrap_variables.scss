@@ -1,28 +1,22 @@
-// This is where you override default Bootstrap variables
-// 1. Find all Bootstrap variables that you can override at the end of each component's documentation under the `Sass variables` anchor
-// e.g. here are the ones you can override for the navbar https://getbootstrap.com/docs/5.3/components/navbar/#sass-variables
-// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
-// 3. You can override them below!
-
 // General style
-$font-family-sans-serif: $body-font;
-$headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
+$font-family-sans-serif: 'Poppins', "Apple Color Emoji", sans-serif; // Poppins par ex.
+$headings-font-family:   $font-family-sans-serif;
+$body-bg:                #DDC8C4; // fond global clair
 $font-size-base:         1rem;
 
 // Colors
-$body-color: $gray;
-$primary:    $blue;
-$success:    $green;
-$info:       $yellow;
-$danger:     $red;
-$warning:    $orange;
+$body-color: #333333; // texte par défaut plus foncé
+$primary:    #6B4D57; // couleur principale (nav, boutons primaires, liens actifs)
+$secondary:  #896A67; // secondaire (hover, accents)
+$light:      #DDC8C4; // background clair
+$success:    #5cb85c; //
+$info:       #5bc0de;
+$danger:     #d9534f;
+$warning:    #f0ad4e;
 
 // Buttons & inputs' radius
-$border-radius-sm:            .0625rem;
-$border-radius:               .125rem;
-$border-radius-lg:            .25rem;
-$border-radius-xl:            .5rem;
-$border-radius-xxl:           1rem;
-
-// Override other variables below!
+$border-radius-sm:            .25rem;
+$border-radius:               .5rem;
+$border-radius-lg:            1rem;
+$border-radius-xl:            1.5rem;
+$border-radius-xxl:           3rem; // pour boutons bien arrondis

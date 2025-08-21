@@ -1,12 +1,30 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+.navbar {
+  background-color: $primary; // #6B4D57
+  padding: 1rem 2rem;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .navbar-brand {
+    font-weight: 700;
+    color: $light; // #DDC8C4
+    font-size: 1.25rem;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+    &:hover {
+      color: $secondary; // #896A67
+    }
+  }
+
+  .nav-link {
+    color: $light;
+    margin-left: 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .btn {
+    border-radius: $border-radius-xxl; // pill shape
+    font-weight: 500;
+    padding: 0.4rem 1.2rem;
+  }
 }

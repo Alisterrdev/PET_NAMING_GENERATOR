@@ -1,2 +1,50 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- app/views/pages/home.html.erb -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetNamingGenerator</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <%= render "shared/navbar" %>
+
+  <!-- Main content -->
+  <main class="container my-5">
+
+    <!-- ZONE ZERO -->
+    <section class="zone-zero">
+      <div class="text">
+        <h1>Créez le nom parfait pour votre animal !</h1>
+        <p>Notre générateur vous aide à trouver un nom unique, original et mémorable pour votre compagnon.</p>
+        <ul>
+          <li>Facile à utiliser</li>
+          <li>Des milliers de combinaisons</li>
+          <li>100% gratuit</li>
+        </ul>
+      </div>
+      <div class="image">
+        <%= image_tag "IMG_6982.jpg", class: "img-fluid", alt: "Chien mignon" %>
+      </div>
+    </section>
+
+    <!-- CTA GENERATOR -->
+    <section class="generator-cta">
+      <h2>Essayez dès maintenant !</h2>
+      <p>Cliquez ci-dessous pour générer un nom unique pour votre animal en quelques secondes.</p>
+      <%= link_to "Générer un nom", new_animal_path, class: "btn-go" %>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <%= render "shared/footer" %>
+
+</body>
+</html>
