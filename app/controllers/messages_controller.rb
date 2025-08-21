@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
       redirect_to animal_path(@animal)
     else
       render :new, status: :unprocessable_entity
+    end
   end
 
   private
@@ -18,4 +19,5 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:content)
   end
 
+end
 end
