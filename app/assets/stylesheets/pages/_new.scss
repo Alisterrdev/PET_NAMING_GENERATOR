@@ -1,0 +1,18 @@
+.form-container {
+  max-width: 600px;   /* largeur max (plus large que le sign-in classique) */
+  margin: 40px auto;  /* centre horizontalement et ajoute un espace en haut/bas */
+  padding: 20px;      /* espace interne */
+  background: #fff;   /* fond blanc */
+  border-radius: 10px;/* coins arrondis */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre */
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container input,
+.form-container button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
