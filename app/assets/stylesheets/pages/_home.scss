@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+.hero-section {
+      padding: 80px 0;
+    }
+.hero-section img {
+      max-width: 100%;
+    }
+.cta-section {
+      background: url('https://your-image-url.com/sheep-background.jpg') no-repeat center center;
+      background-size: cover;
+      color: #6B4D57;
+      padding: 100px 0;
+      text-align: center;
+    }
+.cta-section h2 {
+      font-weight: bold;
+    }
+.cta-section p {
+      margin-top: 15px;
+    }
+.cta-section button {
+      margin-top: 25px;
+}
+
+
+.img-fluid {
+  border-radius: 50%;
+}
