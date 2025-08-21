@@ -1,0 +1,20 @@
+/* Faire en sorte que body prenne toute la hauteur de la fenêtre */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le main prend l'espace restant */
+main {
+  flex: 1;
+}
+
+/* Footer simple, collé en bas */
+.footer {
+  background-color: #6B4D57; /* ou ta couleur */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

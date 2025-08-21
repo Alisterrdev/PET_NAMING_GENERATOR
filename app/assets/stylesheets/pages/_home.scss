@@ -1,1 +1,154 @@
-// Specific CSS for your home-page
+/* Header / Navbar */
+.navbar {
+  background-color: #222 !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+
+  .navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    span.icon {
+      color: #fff;
+    }
+  }
+
+  .nav-link {
+    color: #fff !important;
+    &:hover {
+      color: #ff4b3b !important;
+    }
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+/* Hero / Texte & Bouton */
+.text-section {
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0; /* suppression marge par défaut */
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .btn-go {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #ff4c3b;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* Image ronde */
+.image-section {
+  .image-circle-large {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Second bloc CTA */
+.cta-section {
+  display: flex;
+  flex-direction: column; /* s'assurer que le contenu est vertical */
+  justify-content: center; /* centre verticalement */
+  padding: 2rem; /* padding uniforme */
+  background-color: #DDC8C4;
+  text-align: center;
+  margin: 0; /* suppression marge externe */
+
+  h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 2rem;
+  }
+
+  .btn-cta {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff4b3b;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #ff6f61;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* Footer */
+footer {
+  margin: 0; /* plus de marge blanche */
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+
+/* Structure globale */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* prend tout l’espace restant */
+  margin: 0;
+  padding: 0;
+}
