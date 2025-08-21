@@ -19,6 +19,7 @@ def create
   else
     render :new
   end
+end
 
   private
 
