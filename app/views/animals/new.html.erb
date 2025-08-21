@@ -1,6 +1,5 @@
-<h1 class="d-flex jusitify-center">Who's your animal ?</h1>
-
-<div class="container">
+<div class="form-container">
+<h2 class="d-flex jusitify-center">Who's your animal ?</h2>
 <%= simple_form_for @animal do |f| %>
 
   <%= f.input :species, :collection => %w[Cat Dog],placeholder: "species", required: true %>
