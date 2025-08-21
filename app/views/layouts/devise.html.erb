@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= content_for?(:title) ? yield(:title) : "Auth" %></title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%# Sprockets / cssbundling: %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# (si tu utilises Vite, remplace par vite_client_tag + vite_stylesheet_tag + vite_javascript_tag) %>
+  </head>
+  <body>
+    <main class="auth-wrap">
+      <section class="auth-card">
+        <% flash.each do |k,v| %>
+          <div class="flash <%= k %>"><%= v %></div>
+        <% end %>
+
+        <%= yield %>  <!-- 👈 TRÈS IMPORTANT -->
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body { font-family: $font-family-sans-serif; color: $ink; background: $body-bg; }
+
+.auth-wrap {
+  min-height: 100dvh; display: grid; place-items: center; padding: 24px;
+}
+
+.auth-card {
+  width: 100%; max-width: 420px; background: $card-bg;
+  border-radius: $border-radius-lg; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  padding: 48px 40px;
+}
+
+.auth-title {
+  margin: 0 0 28px; text-align: center; font-weight: 600;
+  font-size: clamp(28px, 4vw, 36px); color: $ink;
+  text-shadow: 0 2px 0 rgba(0,0,0,.04);
+}
+
+.auth-form { display: grid; gap: 16px; }
+
+.auth-form label { display: none; } // on masque les labels Devise
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  width: 100%; border: 1px solid $input-border; border-radius: $border-radius-xxl;
+  padding: 14px 18px; ; color: $ink; outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.auth-form input::placeholder { color: $muted; }
+.auth-form input:focus {
+  border-color: lighten($primary, 15%); box-shadow: 0 0 0 4px rgba($primary, .12);
+}
+
+.auth-links { text-align: center; margin: 4px 0 8px; }
+.auth-links a { color: $muted; text-decoration: none; font-size: .95rem; }
+.auth-links a:hover { text-decoration: underline; color: white($muted, 10%); }
+
+.btn-auth {
+  width: 100%; border: none; border-radius: $border-radius-xxl; padding: 14px 18px;
+  font-weight: 600; background: $primary; color: #fff; cursor: pointer;
+  box-shadow: 0 6px 14px rgba($primary,.25);
+  transition: transform .06s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.btn-auth:hover { background: $primary-hover; box-shadow: 0 10px 18px rgba($primary,.28); }
+.btn-auth:active { transform: translateY(1px); }
+
+@media (max-width: 380px) { .auth-card { padding: 36px 22px; } }
