@@ -1,2 +1,63 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Naming Generator</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <div class="container py-5">
+
+    <!-- Bloc "hero" -->
+    <section class="my-5 px-4">
+      <div class="row align-items-center">
+
+        <!-- Texte -->
+        <div class="text-section col-md-7">
+          <h2 class="fw-bold mb-3">Découvrez notre générateur de noms d’animaux.</h2>
+          <p class="mb-4">
+            <h3>Un générateur créatif et inspirant</h3>
+
+          </p>
+                <ul class="list-unstyled">
+        <li class="mb-2">
+          <h6><strong>Des idées originales</strong> et adaptées à toutes les envies </h6>
+        </li>
+        <li class="mb-2">
+          <h6><strong>Un outil simple, ludique et rapide</strong> à utiliser</h6>
+        </li>
+        <li class="mb-2">
+          <h6><strong>Un outil fun et créatif</strong> pour trouver en un clic le nom parfait pour votre compagnon, vos personnages ou vos projets</h6>
+        </li>
+      </ul>
+      <br>
+          <%= link_to "Générer un nom", new_animal_path, class: "btn-go" %>
+
+        </div>
+
+        <!-- Image -->
+        <div class="image-section col-md-5 text-center">
+          <div class="image-circle-large mx-auto">
+            <%= image_tag "IMG_6982.jpg", alt: "Chien mignon" %>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+<section class="cta-section">
+  <div class="container text-center mt-4 pb-4">
+    <h2>🚀 Donnez un nom unique dès maintenant !</h2>
+    <p>Lancez le générateur et trouvez en quelques secondes le nom parfait pour votre animal.</p>
+    <%= link_to "Je trouve mon nom !", new_animal_path, class: "btn-cta" %>
+  </div>
+</section>
+
+</body>
+</html>

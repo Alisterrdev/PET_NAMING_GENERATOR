@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%cat_breeds = ["Maine Coon", "Siamois", "Persan", "Bengal", "Sphinx", "Ragdoll"] %>
 <%dog_breeds = ["Chihuahua", "Border Collier", "Labrador", "Shiba Inu", "Beagle", "Bulldog", "Corgy"] %>
 <%turtle_breeds = ["Tortue d'Hermann", "Tortue grecque", "Tortue léopard", "Tortue sillonnée", "Tortue de Floride", "Tortue musquée"]%>
@@ -23,11 +24,9 @@
     <div data-animal-target="turtleWrapper" class="hidden">
       <%= f.input :race, label: "Turtle breeds", as: :select, collection: turtle_breeds, input_html: { disabled: true }%>
     </div>
-
   <%= f.input :sex, :collection => %w[male female], placeholder: "sex", required: true %>
   <%= f.input :origin, placeholder: "origin of the name you want", required: true %>
   <%= f.input :color, placeholder: "color", required: true %>
-
   <%= f.button :submit, 'Generate a cool original name', class: 'btn btn-primary' %>
 <% end %>
 </div>
