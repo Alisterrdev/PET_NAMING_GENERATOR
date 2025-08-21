@@ -1,4 +1,6 @@
+require "open-uri"
 class AnimalsController < ApplicationController
+
 
 SYSTEM_PROMPT = 'Tu es un générateur de prénoms pour animaux et plus particulièrement pour chiens et chats.
 
@@ -28,6 +30,12 @@ Réponds moi avec le nom, UNIQUEMENT LE NOM.'
     @animal = Animal.find(params[:id])
     @chat = RubyLLM.chat
     @response = @chat.ask(instructions)
+    # prompt = "Un dessin mignon d'un animal"
+    # @image = RubyLLM.paint(prompt, size: "256x256")
+    # image_url = image.url
+    # @file = URI.open(image["url"])
+    # @animal.generated_image.attach(io: file, filename: "animal.png", content_type: "image/png")
+    # redirect_to @animal, notice: "Your pet has been generated with an awesome name !"
   end
 
   private
@@ -39,7 +47,7 @@ Réponds moi avec le nom, UNIQUEMENT LE NOM.'
     private
 
   def animal_context
-    "Je suis futur propriétaire d’un animal et je recherche un prénom et une description qui répond à ces 5 critères: #{@animal.species}, #{@animal.race}, #{@animal.color}, #{@animal.sex}, #{@animal.origin}."
+    "Je suis futur propriétaire d’un animal et je recherche un prénom qui répond à ces 5 critères: #{@animal.species}, #{@animal.race}, #{@animal.color}, #{@animal.sex}, #{@animal.origin}."
   end
 
   def instructions

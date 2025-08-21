@@ -1,5 +1,9 @@
 <h1><%= @response.content %></h1>
 
+
+<%# <% if @animal.generated_image.attached?%>
+  <%# <%= image_tag @animal.generated_image, class: rounded shadow-md %>
+  <%# <% end %>
 <h2>Congratulations ! You found a great name for your pet !</h2>
 
 <%= link_to "Regénérer un prénom", new_animal_path(@animal), class: "btn btn-primary" %>
