@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PetNamingGenerator</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 </head>
-
-<body>
-  <%= render "shared/navbar" %>  <!-- ici on met le header -->
-
-  <%= yield %>  <!-- contenu spécifique de chaque page -->
-
-  <%= render "shared/footer" %>  <!-- ici on met le footer -->
+<body class="d-flex flex-column min-vh-100">
+  <%= render "shared/navbar" %>
+  <main class="flex-grow-1">
+    <%= yield %>
+  </main>
+  <%= render "shared/footer" %>
 </body>
 </html>
