@@ -1,9 +1,14 @@
+<section class="my-5 px-4">
+      <div class="container text-center mt-4 pb-4">
 <h1><%= @response.content %></h1>
 
 
 <%# <% if @animal.generated_image.attached?%>
   <%# <%= image_tag @animal.generated_image, class: rounded shadow-md %>
   <%# <% end %>
-<h2>Congratulations ! You found a great name for your pet !</h2>
+<h2>Félicitations ! Tu as trouvé un nom génial pour ton animal !</h2>
 
-<%= link_to "Regénérer un prénom", new_animal_path(@animal), class: "btn btn-primary" %>
+
+<%= link_to "Regénérer un prénom", new_animal_path(@animal), class: "btn btn-primary mt-4" %>
+    </div>
+</section>
