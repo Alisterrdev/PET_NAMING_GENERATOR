@@ -47,7 +47,7 @@ Réponds moi avec le nom, UNIQUEMENT LE NOM.'
     private
 
   def animal_context
-    "Je suis futur propriétaire d’un animal et je recherche un prénom qui répond à ces 5 critères: #{@animal.species}, #{@animal.race}, #{@animal.color}, #{@animal.sex}, #{@animal.origin}."
+    "Je suis futur propriétaire d’un animal et je recherche un prénom qui répond à ces 5 critères: #{@animal.species}, #{@animal.color}, #{@animal.sex}, #{@animal.origin}."
   end
 
   def instructions
