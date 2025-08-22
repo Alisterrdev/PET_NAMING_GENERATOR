@@ -1,9 +1,30 @@
-<div class="form-container">
-<h2 class="d-flex jusitify-center">Who's your animal ?</h2>
+
+<%cat_breeds = ["Maine Coon", "Siamois", "Persan", "Bengal", "Sphinx", "Ragdoll"] %>
+<%dog_breeds = ["Chihuahua", "Border Collier", "Labrador", "Shiba Inu", "Beagle", "Bulldog", "Corgy"] %>
+<%turtle_breeds = ["Tortue d'Hermann", "Tortue grecque", "Tortue léopard", "Tortue sillonnée", "Tortue de Floride", "Tortue musquée"]%>
+
+<style>
+  .hidden {display: none;}
+  </style>
+
+<h1 class="d-flex jusitify-center">Who's your animal ?</h1>
+
+<div class="container">
+<div data-controller="animal">
+
 <%= simple_form_for @animal do |f| %>
 
-  <%= f.input :species, :collection => %w[Cat Dog],placeholder: "species", required: true %>
-  <%= f.input :race, :collection => %w[MaineCoon Siamois Persan Bengal Sphinx Ragdoll], placeholder: "race", required: true %>
+  <%= f.input :species, label: "Species", as: :select, collection: ["dog", "cat", "turtle"], input_html: {"data-animal-target": "typeSelect", "data-action": "change->animal#update"} %>
+   <div data-animal-target="dogWrapper" class="hidden">
+      <%= f.input :race, label: "Dog breeds", as: :select, collection: dog_breeds, input_html: { disabled: true }%>
+    </div>
+   <div data-animal-target="catWrapper" class="hidden">
+      <%= f.input :race, label: "Cat breeds", as: :select, collection: cat_breeds, input_html: { disabled: true }%>
+    </div>
+    <div data-animal-target="turtleWrapper" class="hidden">
+      <%= f.input :race, label: "Turtle breeds", as: :select, collection: turtle_breeds, input_html: { disabled: true }%>
+    </div>
+
   <%= f.input :sex, :collection => %w[male female], placeholder: "sex", required: true %>
   <%= f.input :origin, placeholder: "origin of the name you want", required: true %>
   <%= f.input :color, placeholder: "color", required: true %>
